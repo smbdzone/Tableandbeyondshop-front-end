@@ -8,21 +8,13 @@ import Display from './components/Display'
 import ImageCarousel from './components/ImageCarousel'
 import Footer from './components/Footer'
 import Table from './components/Table'
+import { RouterProvider } from 'react-router-dom'
+import router from './routes/route'
 
 function App() {
   return (
     <>
-     <Navbar />
-     <MegaNav />
-     <ContactBar />
-     <Landing />
-     <Carousel />
-    
-     <Display />
-
-     <ImageCarousel />
-     <Table />
-     <Footer />
+     <RouterProvider router={router} />
     </>
   )
 }
