@@ -3,7 +3,7 @@ import source from '../assets/logo2.png'
 
 const Footer = () => {
     return (
-        <div className='w-screen bg-[#A6C3DB] mt-10 p-10 flex gap-40'>
+        <div className='w-full bg-[#A6C3DB] mt-10 p-10 flex gap-40 '>
             <img src={source} alt="" className='-translate-x-10' />
             <div className='flex flex-col gap-36'>
                 <div className="flex gap-36">

@@ -11,7 +11,8 @@ const Button = (props) => {
             fontWeight:"400px",
             fontStyle:"normal",
             lineHeight:"30px",
-        }}>
+        }}
+        onClick={props.onClick}>
             {props.text}
         </button>
     </div>

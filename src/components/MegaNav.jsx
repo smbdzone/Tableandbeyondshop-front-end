@@ -159,23 +159,23 @@ const MegaNav = () => {
       };
     
       return (
-        <nav className="flex justify-self-auto  p-2 bg-[#A19C97] text-white">
+        <nav className="flex justify-self-auto  p-2 bg-[#A19C97] text-white  relative ">
           <div className="flex space-x-4">
             {megaMenuItems.map((item, index) => (
               <div
                 key={item.title}
-                className="relative group"
+                className=" group"
                 onMouseEnter={() => handleMouseEnter(index)}
-                onMouseLeave={handleMouseLeave}
+                
               >
                 <button className="cursor-pointer flex items-center">
                   {item.title} <FaAngleDown className="ml-1" />
                 </button>
                 {activeMenu === index && (
-                  <div className="absolute top-full left-0 bg-white text-gray-800 shadow-lg p-4 w-screen max-w-3xl z-10">
-                    <div className="flex space-x-8">
+                  <div className="absolute top-full left-0 bg-white text-gray-800 shadow-lg p-4 w-screen z-10" onMouseLeave={handleMouseLeave}>
+                    <div className="flex space-x-8" >
                       {item.categories.map((category) => (
-                        <div key={category.title}>
+                        <div key={category.title} >
                           <h2 className="font-semibold">{category.title}</h2>
                           <ul>
                             {category.links.map((link, linkIndex) => (
