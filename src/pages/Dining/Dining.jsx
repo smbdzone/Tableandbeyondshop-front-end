@@ -8,7 +8,15 @@ import Glassware from '../../assets/Glassware.png';
 import ContactBar from '../../components/ContactBar';
 import Footer from '../../components/Footer';
 import ItemCard from '../../components/ItemCard';
-import Rectangle1 from '../../assets/Dinnerware1.png';
+import dish1 from '../../assets/dish1.png';
+import dish2 from '../../assets/dish2.png';
+import dish3 from '../../assets/dish3.png';
+import dish4 from '../../assets/dish4.png';
+import dish5 from '../../assets/dish5.png';
+import dish6 from '../../assets/dish6.png';
+import dish7 from '../../assets/dish7.png';
+import dish8 from '../../assets/dish8.png';
+import dish9 from '../../assets/dish9.png';
 import './Dining.css';
 import { useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
@@ -21,6 +29,7 @@ import car4 from '../../assets/car4.png';
 
 const Dining = () => {
 
+    const [gridQuantity, setgridQuantity] = useState(3);
     const carouselItems = [
         {
             id: 1,
@@ -95,12 +104,25 @@ const Dining = () => {
     const endIndex = startIndex + itemsPerPage;
     const slicedItems = carouselItems.slice(startIndex, endIndex);
 
+    const calculateCardSize = () => {
+        const baseWidth = 318;
+        const baseHeight = 435;
+        const reductionFactor = (gridQuantity - 1) * 0.1;
+        const width = baseWidth * (1 - reductionFactor);
+        const height = baseHeight * (1 - reductionFactor);
+
+        return { width, height };
+    };
+
+    const { width: cardWidth, height: cardHeight } = calculateCardSize();
+
+
     return (
         <div style={{overflowX:'hidden'}}>
             <Navbar />
             <MegaNav />
             <ContactBar />
-            <div className="flex flex-col text-center gap-[40px] ">
+            <div className="flex flex-col text-center gap-[40px] mt-[30px] ">
                 <p className='heading'>Home / Dining</p>
                 <p className='subheading'>Dining</p>
                 <div className='flex flex-row justify-center items-center'>
@@ -122,10 +144,10 @@ const Dining = () => {
                         <p className='text-[#002D4F] font-bold text-[18px]'>Glassware</p>
                     </div>
                 </div>
-                <div className='flex ' style={{
+                <div className='flex mt-[80px]' style={{
                     justifyContent: 'space-between'
                 }}>
-                    <div className='flex items-center justify-center gap-4 ml-[50px]  '>
+                    <div className='flex items-center justify-center gap-4 ml-[50px]   '>
                         <div className='flex items-center justify-center filterOptions'>
                             Color
                         </div>
@@ -139,20 +161,24 @@ const Dining = () => {
                             All filters
                         </div>
                     </div>
-                    <div className='flex'>
+                    <div className='flex flex-row '>
                         <p>View</p>
-                        <input type="range" />
-                        <p>6 products</p>
+                        <input type="range" value={gridQuantity} onChange={(e) => setgridQuantity(e.target.value)} min="3" max="6"/>
+                        <p>{gridQuantity} products</p>
                     </div>
 
                 </div>
-                <div className="grid grid-cols-3 gap-[70px] ml-[100px] mt-[50px] carousel ">
+                <div className={`grid grid-cols-${gridQuantity} gap-x-${90/gridQuantity} gap-y-20  mt-[50px] carousel justify-items-center`}>
                     {/* Item Cards */}
-                    <ItemCard src={Rectangle1} title={"very nice"} description={"very nice"} price={500} detail={"New"} />
-                    <ItemCard src={Rectangle1} title={"very nice"} description={"very nice"} price={500} detail={"New"} />
-                    <ItemCard src={Rectangle1} title={"very nice"} description={"very nice"} price={500} detail={"New"} />
-                    <ItemCard src={Rectangle1} title={"very nice"} description={"very nice"} price={500} detail={"New"} />
-
+                    <ItemCard src={dish1} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height={"100%"} width="" />
+                    <ItemCard src={dish2} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="" width=""/>
+                    <ItemCard src={dish3} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="" width=""/>
+                    <ItemCard src={dish4} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="" width=""/>
+                    <ItemCard src={dish5} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="" width=""/>
+                    <ItemCard src={dish6} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="" width=""/>    
+                    <ItemCard src={dish7} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="" width=""/>
+                    <ItemCard src={dish8} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="" width=""/>
+                    <ItemCard src={dish9} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="" width=""/>
                     {/* You can add more ItemCard components here */}
                 </div>
                 <div className='text-left relative ml-[50px]'>

@@ -13,6 +13,7 @@ const Input = (props) => {
             fontWeight:"400px",
             fontStyle:"normal",
             lineHeight:"80px",
+            paddingLeft:props.paddingLeft,
         }}  />
     </div>
   )

@@ -71,13 +71,13 @@ const ItemCard = (props) => {
 
         {props.favIconPos !== "lvp" ? (
             <>
-            <div className='text-[#8D7C3B] flex justify-between text-[18px] ' >
+            <div className='text-[#8D7C3B] flex justify-between text-[18px] pl-5 ' >
                 <p>{props.title}</p>
             </div>
             <hr className='border-[#F69785] mb-1 mt-1 border-2' />
 
-            <p className='text-[#9C9687] text-[25px] '>{props.description}</p>
-            <p className='text-[#002D4F] font-bold text-[18px]'>{props.price} AED</p>
+            <p className='text-[#9C9687] text-[25px] text-left pl-5'>{props.description}</p>
+            <p className='text-[#002D4F] font-normal  text-[18px] text-left pl-5'>{props.price} AED</p>
             </>
         ) : (
             <>
