@@ -24,6 +24,7 @@ import car5 from '../../assets/car5.png';
 import car2 from '../../assets/car2.png';
 import car3 from '../../assets/car3.png';
 import car4 from '../../assets/car4.png';
+import FilterModal from '../../components/FilterModal';
 
 
 
@@ -116,6 +117,18 @@ const Dining = () => {
 
     const { width: cardWidth, height: cardHeight } = calculateCardSize();
 
+    const openModal = () => {
+        if(document.getElementsByClassName('myModal')[0].style.display === 'block'){
+            document.getElementsByClassName('myModal')[0].style.display = 'none';
+            return;
+        }else{
+            document.getElementsByClassName('myModal')[0].style.display = 'block';
+        console.log('modal opened');
+
+        }
+        
+    }
+
 
     return (
         <div style={{overflowX:'hidden'}}>
@@ -157,7 +170,7 @@ const Dining = () => {
                         <div className='flex items-center justify-center filterOptions'>
                             Sort
                         </div>
-                        <div className='flex items-center justify-center filterOptions'>
+                        <div className='flex items-center justify-center filterOptions' onClick={openModal}>
                             All filters
                         </div>
                     </div>
@@ -168,9 +181,9 @@ const Dining = () => {
                     </div>
 
                 </div>
-                <div className={`grid grid-cols-${gridQuantity} gap-x-${90/gridQuantity} gap-y-20  mt-[50px] carousel justify-items-center`}>
+                <div className={`grid grid-cols-${gridQuantity} gap-4 gap-y-20  mt-[50px]  justify-items-center `}>
                     {/* Item Cards */}
-                    <ItemCard src={dish1} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height={"100%"} width="" />
+                    <ItemCard src={dish1} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="" width="" />
                     <ItemCard src={dish2} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="" width=""/>
                     <ItemCard src={dish3} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="" width=""/>
                     <ItemCard src={dish4} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="" width=""/>
@@ -218,6 +231,9 @@ const Dining = () => {
                     <p className='DPara w-[90%]'>Dining Products: is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,</p>
                     <p className='DPara w-[90%]'>Remaining essentially unchanged. It was popularized in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
                 </div>
+            </div>
+            <div className=' myModal absolute  top-0 right-[10px] h-fit w-fit ' style={{display:"none"}} >
+                <FilterModal handClose={openModal}/>
             </div>
             <Footer />
 
