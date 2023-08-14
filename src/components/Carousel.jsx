@@ -99,7 +99,7 @@ const CarouselSection = () => {
                   <FaRegStar />
                 </div>
               </div>
-              <hr className='border-[#F69785] mb-2 mt-1 border-2'  />
+              <hr className='border-[#F69785] mb-2 mt-1 border-2' />
 
               <p className='text-[#9C9687] text-xs'>Luxurious Bag Decorated</p>
               <p className='text-[#002D4F] font-bold text-sm'>500 AED</p>
@@ -140,7 +140,7 @@ const CarouselSection = () => {
                   <FaRegStar />
                 </div>
               </div>
-              <hr className='border-[#F69785] mb-2 mt-1 border-2'  />
+              <hr className='border-[#F69785] mb-2 mt-1 border-2' />
 
               <p className='text-[#9C9687] text-xs'>Luxurious Bag Decorated</p>
               <p className='text-[#002D4F] font-bold text-sm'>500 AED</p>
@@ -164,7 +164,7 @@ const CarouselSection = () => {
                 </div>
               </div>
 
-            
+
 
               <div className=''>
 
@@ -179,7 +179,7 @@ const CarouselSection = () => {
                   <FaRegStar />
                 </div>
               </div>
-              <hr className='border-[#F69785] mb-2 mt-1 border-2'  />
+              <hr className='border-[#F69785] mb-2 mt-1 border-2' />
 
               <p className='text-[#9C9687] text-xs'>Luxurious Bag Decorated</p>
               <p className='text-[#002D4F] font-bold text-sm'>500 AED</p>
@@ -209,7 +209,7 @@ const CarouselSection = () => {
                   <FaRegStar />
                 </div>
               </div>
-              <hr className='border-[#F69785] mb-2 mt-1 border-2'  />
+              <hr className='border-[#F69785] mb-2 mt-1 border-2' />
 
               <p className='text-[#9C9687] text-xs'>Luxurious Bag Decorated</p>
               <p className='text-[#002D4F] font-bold text-sm'>500 AED</p>
@@ -241,7 +241,7 @@ const CarouselSection = () => {
                   <FaRegStar />
                 </div>
               </div>
-              <hr className='border-[#F69785] mb-2 mt-1 border-2'  />
+              <hr className='border-[#F69785] mb-2 mt-1 border-2' />
 
               <p className='text-[#9C9687] text-xs'>Luxurious Bag Decorated</p>
               <p className='text-[#002D4F] font-bold text-sm'>500 AED</p>
@@ -251,16 +251,16 @@ const CarouselSection = () => {
               <img src={car6} alt="" />
               <div className='flex justify-center absolute translate-x-1/2 translate-y-[-20px] gap-1'>
 
-<div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B]'>
-  <FaGift />
-</div>
-<div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B]'>
-  <FaShoppingBag />
-</div>
-<div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B]'>
-  <FaEye />
-</div>
-</div>
+                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B]'>
+                  <FaGift />
+                </div>
+                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B]'>
+                  <FaShoppingBag />
+                </div>
+                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B]'>
+                  <FaEye />
+                </div>
+              </div>
 
               <div className='text-[#8D7C3B] flex justify-between mt-5' >
                 <p>Description</p>
@@ -272,7 +272,7 @@ const CarouselSection = () => {
                   <FaRegStar />
                 </div>
               </div>
-              <hr className='border-[#F69785] mb-2 mt-1 border-2'  />
+              <hr className='border-[#F69785] mb-2 mt-1 border-2' />
 
               <p className='text-[#9C9687] text-xs'>Luxurious Bag Decorated</p>
               <p className='text-[#002D4F] font-bold text-sm'>500 AED</p>
