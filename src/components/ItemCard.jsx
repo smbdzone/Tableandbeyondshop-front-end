@@ -23,7 +23,7 @@ const ItemCard = (props) => {
                 <p className='absolute top-[23px] right-[13px] text-white'>{props.detail}</p>
             </div>
 
-            <div className='flex justify-center absolute translate-x-[60px] translate-y-[-20px] gap-4 '>
+            <div className='flex justify-center absolute translate-x-[80px] translate-y-[-20px] gap-4 '>
 
                 <div className='flex h-[55px] w-[55px] rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B]'>
                     <FaGift />
