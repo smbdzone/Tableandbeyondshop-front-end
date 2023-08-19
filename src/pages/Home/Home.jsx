@@ -125,31 +125,32 @@ const Home = () => {
     <Landing />
     <CarouselSection />   
     <Display />
-    <ImageCarousel />
+    <Table />
     <div className='text-left relative ml-[50px] mt-[60px] newArrival'>
                     <div className='flex w-full ' style={{
                         justifyContent: 'space-between'
                 
                     }}>
-                    <p className='Dheading'>Last Viewed Products</p>
-                    <div className="flex justify-center ">
-                        <button
+                    <p className='Dheading'>New Arrival</p>
+                    <div className="flex justify-center mr-[80px] ">
+                        <div
                             onClick={handlePrevPage}
                             disabled={currentPage === 0}
-                            className="mr-2"
+                            className="mr-2 navigation"
                         >
-                            <FaChevronLeft size={20} />
-                        </button>
-                        <button
+                            ‹
+                        </div>
+                        <div
                             onClick={handleNextPage}
                             disabled={currentPage === totalPages - 1}
+                            className='navigation'
                         >
-                            <FaChevronRight size={20} />
-                        </button>
+                            ›
+                        </div>
                     </div>
                     </div>
                     <hr></hr>
-                    <div className="grid grid-cols-4  mt-[50px] carousel pb-[100px]">
+                    <div className="grid grid-cols-4  mt-[50px] carousel pb-[100px] newArrival">
                         {/* Display sliced carousel items */}
                         {slicedItems.map((item) => (
                             <ItemCard src={item.src} title={item.title} description={item.description} price={item.price} favIconPos="lvp" bgheight="318px" bgwidth="318px" imgheight="257px" imgwidth="257px" height="100%" width="318px" />
@@ -158,7 +159,8 @@ const Home = () => {
                     
 
                 </div>
-    <Table />
+                <ImageCarousel />
+    
     <Footer />
     </div>
   )

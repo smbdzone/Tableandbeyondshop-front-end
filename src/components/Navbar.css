@@ -1,0 +1,5 @@
+
+
+.input-placeholder-transition[type="text"]::placeholder {
+    color: white !important;
+  }

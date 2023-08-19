@@ -8,6 +8,7 @@ import car3 from '../assets/car3.png';
 // import car4 from '../assets/car4.png';
 import car5 from '../assets/car5.png';
 import car6 from '../assets/car6.png';
+import './Carousel.css';
 
 
 const CarouselSection = () => {
@@ -21,7 +22,7 @@ const CarouselSection = () => {
       ],
     },
     {
-      title: 'Children Room',
+      title: 'Kitchen Room',
       images: [
         { src: { car1 }, description: 'Description 1' },
         { src: { car2 }, description: 'Description 2' },
@@ -29,7 +30,7 @@ const CarouselSection = () => {
       ],
     },
     {
-      title: 'Adults Room',
+      title: 'Dining Room',
       images: [
         { src: { car1 }, description: 'Description 1' },
         { src: { car2 }, description: 'Description 2' },
@@ -37,7 +38,7 @@ const CarouselSection = () => {
       ],
     },
     {
-      title: 'Masters Room',
+      title: 'Cheese Room',
       images: [
         { src: { car1 }, description: 'Description 1' },
         { src: { car2 }, description: 'Description 2' },
@@ -60,13 +61,19 @@ const CarouselSection = () => {
   const currentCarouselItem = carouselItems[activeIndex];
 
   return (
-    <section className="bg-white py-10">
+    <section className="bg-white pb-10">
       <div className="container mx-auto">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-bold">{currentCarouselItem.title}</h2>
+          <h2 className="text-[40px] font-normal">{currentCarouselItem.title}</h2>
           <div className="flex items-center space-x-4">
-            <FaAngleLeft className="cursor-pointer" onClick={handlePrevClick} />
-            <FaAngleRight className="cursor-pointer" onClick={handleNextClick} />
+            <div className='navigation cursor-pointer ' onClick={handlePrevClick}>
+            ‹
+            </div>
+            <div className='navigation cursor-pointer' onClick={handleNextClick}>
+            ›
+            </div>
+            {/* <FaAngleLeft className="cursor-pointer h-[60px] w-[10px] " color='#C1A868' onClick={handlePrevClick} />
+            <FaAngleRight className="cursor-pointer" color='#C1A868' onClick={handleNextClick} /> */}
           </div>
         </div>
         <hr className="mb-4 h-1 bg-[#6C757D]" />
@@ -78,13 +85,13 @@ const CarouselSection = () => {
             <div className='relative'>
               <img src={car2} alt="" />
               <div className='flex justify-center absolute right-1/2 top-[262px] translate-x-1/2 gap-1'>
-                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hover:bg-[#002D4F]'>
+                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hoverbtn hover:bg-[#002D4F]'>
                   <FaGift />
                 </div>
-                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B]'>
+                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hoverbtn hover:bg-[#002D4F]'>
                   <FaShoppingBag />
                 </div>
-                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B]'>
+                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hoverbtn hover:bg-[#002D4F]'>
                   <FaEye />
                 </div>
               </div>
@@ -120,13 +127,13 @@ const CarouselSection = () => {
               </div> */}
               <div className='flex justify-center absolute translate-x-1/2 translate-y-[-20px] gap-1'>
 
-                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B]'>
+                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] '>
                   <FaGift />
                 </div>
-                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B]'>
+                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hover:bg-[#002D4F]'>
                   <FaShoppingBag />
                 </div>
-                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B]'>
+                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hover:bg-[#002D4F]'>
                   <FaEye />
                 </div>
               </div>
@@ -153,13 +160,13 @@ const CarouselSection = () => {
               <img src={car6} alt="" />
               <div className='flex justify-center absolute translate-x-1/2 translate-y-[-20px] gap-1'>
 
-                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B]'>
+                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hover:bg-[#002D4F]'>
                   <FaGift />
                 </div>
-                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B]'>
+                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hover:bg-[#002D4F]'>
                   <FaShoppingBag />
                 </div>
-                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B]'>
+                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hover:bg-[#002D4F]'>
                   <FaEye />
                 </div>
               </div>
@@ -189,13 +196,13 @@ const CarouselSection = () => {
               <img src={car5} alt="" />
               <div className='flex justify-center absolute translate-x-1/2 translate-y-[-20px] gap-1'>
 
-                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B]'>
+                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hover:bg-[#002D4F]'>
                   <FaGift />
                 </div>
-                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B]'>
+                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hover:bg-[#002D4F]'>
                   <FaShoppingBag />
                 </div>
-                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B]'>
+                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hover:bg-[#002D4F]'>
                   <FaEye />
                 </div>
               </div>
@@ -221,13 +228,13 @@ const CarouselSection = () => {
               <img src={car2} alt="" />
               <div className='flex justify-center absolute translate-x-1/2 translate-y-[-20px] gap-1'>
 
-                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B]'>
+                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hover:bg-[#002D4F]'>
                   <FaGift />
                 </div>
-                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B]'>
+                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hover:bg-[#002D4F]'>
                   <FaShoppingBag />
                 </div>
-                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B]'>
+                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hover:bg-[#002D4F]'>
                   <FaEye />
                 </div>
               </div>
@@ -251,13 +258,13 @@ const CarouselSection = () => {
               <img src={car6} alt="" />
               <div className='flex justify-center absolute translate-x-1/2 translate-y-[-20px] gap-1'>
 
-                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B]'>
+                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hover:bg-[#002D4F]'>
                   <FaGift />
                 </div>
-                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B]'>
+                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hover:bg-[#002D4F]'>
                   <FaShoppingBag />
                 </div>
-                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B]'>
+                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hover:bg-[#002D4F]'>
                   <FaEye />
                 </div>
               </div>

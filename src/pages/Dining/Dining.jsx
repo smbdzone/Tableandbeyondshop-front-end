@@ -138,7 +138,7 @@ const Dining = () => {
             <div className="flex flex-col text-center gap-[40px] mt-[30px] ">
                 <p className='heading'>Home / Dining</p>
                 <p className='subheading'>Dining</p>
-                <div className='flex flex-row justify-center items-center'>
+                <div className='flex flex-row justify-center items-center gap-4'>
                     <div className='flex flex-col'>
                         <img src={Dinnerware} alt="" className='w-[138px] h-[132px]' />
                         <p className='text-[#002D4F] font-bold text-[18px]'>Dinnerware</p>
@@ -151,6 +151,27 @@ const Dining = () => {
                         <img src={Flatware} alt="" className='w-[138px] h-[132px]' />
                         <p className='text-[#002D4F] font-bold text-[18px]'>Flatware</p>
 
+                    </div>
+                    <div className='flex flex-col'>
+                        <img src={Glassware} alt="" className='w-[138px] h-[132px]' />
+                        <p className='text-[#002D4F] font-bold text-[18px]'>Glassware</p>
+                    </div>
+                    <div className='flex flex-col'>
+                        <img src={Dinnerware} alt="" className='w-[138px] h-[132px]' />
+                        <p className='text-[#002D4F] font-bold text-[18px]'>Dinnerware</p>
+                    </div>
+                    <div className='flex flex-col'>
+                        <img src={Barware} alt="" className='w-[138px] h-[132px]' />
+                        <p className='text-[#002D4F] font-bold text-[18px]'>Barware</p>
+                    </div>
+                    <div className='flex flex-col'>
+                        <img src={Flatware} alt="" className='w-[138px] h-[132px]' />
+                        <p className='text-[#002D4F] font-bold text-[18px]'>Flatware</p>
+
+                    </div>
+                    <div className='flex flex-col'>
+                        <img src={Glassware} alt="" className='w-[138px] h-[132px]' />
+                        <p className='text-[#002D4F] font-bold text-[18px]'>Glassware</p>
                     </div>
                     <div className='flex flex-col'>
                         <img src={Glassware} alt="" className='w-[138px] h-[132px]' />
@@ -181,9 +202,9 @@ const Dining = () => {
                     </div>
 
                 </div>
-                <div className={`grid grid-cols-${gridQuantity} gap-4 gap-y-20  mt-[50px]  justify-items-center `}>
+                <div className={`grid grid-cols-${gridQuantity} gap-4 gap-y-20  mt-[50px]  justify-items-center w-full  `} >
                     {/* Item Cards */}
-                    <ItemCard src={dish1} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="" width="" />
+                    <ItemCard src={dish1} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="" width=""  />
                     <ItemCard src={dish2} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="" width=""/>
                     <ItemCard src={dish3} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="" width=""/>
                     <ItemCard src={dish4} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="" width=""/>

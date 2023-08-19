@@ -11,6 +11,7 @@ const ItemCard = (props) => {
             boxShadow: '0px 2px 6px 0px rgba(0, 0, 0, 0.10)',
             height: props.height,
             width: props.width,
+            backgroundColor: props.bgColor,
 
         }}>
             <div className='bg-[#E2DDD9] rounded-[10px] relative flex' style={{
@@ -58,13 +59,13 @@ const ItemCard = (props) => {
 
             <div className='flex justify-center    translate-y-[-20px] gap-4 '>
 
-                <div className='flex h-[55px] w-[55px] rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B]'>
+                <div className='flex h-[55px] w-[55px] rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hover:bg-[#002D4F]'>
                     <FaGift />
                 </div>
-                <div className='flex h-[55px] w-[55px] rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B]'>
+                <div className='flex h-[55px] w-[55px] rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hover:bg-[#002D4F]'>
                     <FaShoppingBag />
                 </div>
-                <div className='flex h-[55px] w-[55px] rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B]'>
+                <div className='flex h-[55px] w-[55px] rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hover:bg-[#002D4F]'>
                     <FaEye />
                 </div>
             </div>
