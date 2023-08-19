@@ -126,16 +126,17 @@ const Home = () => {
     <CarouselSection />   
     <Display />
     <Table />
-    <div className='text-left relative ml-[50px] mt-[60px] newArrival'>
-                    <div className='flex w-full ' style={{
+    <div className='text-left relative mt-[150px] mb-[80px] newArrival bg-[#F2F2F1]'>
+        <div className='mx-[100px] pt-14'>
+                    <div className='flex w-full  ' style={{
                         justifyContent: 'space-between'
                 
                     }}>
-                    <p className='Dheading'>New Arrival</p>
+                    <p className='Dheading text-[40px] text-[#002D4F] '>New Arrival</p>
                     <div className="flex justify-center mr-[80px] ">
                         <div
                             onClick={handlePrevPage}
-                            disabled={currentPage === 0}
+                            disabled={currentPage === 0}    
                             className="mr-2 navigation"
                         >
                             ‹
@@ -149,12 +150,14 @@ const Home = () => {
                         </div>
                     </div>
                     </div>
-                    <hr></hr>
+                    <hr className="mb-4 border-2 bg-[#6C757D ] w-[1550px]" />
+
                     <div className="grid grid-cols-4  mt-[50px] carousel pb-[100px] newArrival">
                         {/* Display sliced carousel items */}
                         {slicedItems.map((item) => (
-                            <ItemCard src={item.src} title={item.title} description={item.description} price={item.price} favIconPos="lvp" bgheight="318px" bgwidth="318px" imgheight="257px" imgwidth="257px" height="100%" width="318px" />
+                            <ItemCard key={item} src={item.src} title={item.title} description={item.description} price={item.price} favIconPos="lvp" bgheight="318px" bgwidth="318px" imgheight="257px" imgwidth="257px" height="100%" width="318px" />
                         ))}
+                    </div>
                     </div>
                     
 

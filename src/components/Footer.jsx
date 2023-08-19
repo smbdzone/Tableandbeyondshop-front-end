@@ -41,9 +41,9 @@ const Footer = () => {
                 <p className='text-center' >
                 Subscribe to our Newsletter and enjoy 15% discount
                 </p >
-                <div className='flex flex-col w-full justify-center items-center gap-5'>
-                <Input placeholder="Enter Full Name"  paddingLeft="20px"/>
-                <Input placeholder="Enter Email" paddingLeft="20px"/>
+                <div className='flex flex-col w-full  justify-center items-center gap-5'>
+                <Input placeholder="Enter Full Name"  paddingLeft="25px"/>
+                <Input placeholder="Enter Email" paddingLeft="20px" />
                 <button className='w-[192px] h-[44px] shrink-0 rounded-[5px] bg-[#8D7C3B] text-white' style={{
                     fontFamily:"PT Sans",
                 }}>

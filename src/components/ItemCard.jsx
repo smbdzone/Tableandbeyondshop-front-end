@@ -8,7 +8,7 @@ const ItemCard = (props) => {
 
     return (
         <div className='w-[360px] rounded-[10px] h-[ 610px]  ' style={{
-            boxShadow: '0px 2px 6px 0px rgba(0, 0, 0, 0.10)',
+            // boxShadow: '0px 2px 6px 0px rgba(0, 0, 0, 0.10)',
             height: props.height,
             width: props.width,
             backgroundColor: props.bgColor,

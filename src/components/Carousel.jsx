@@ -64,7 +64,7 @@ const CarouselSection = () => {
     <section className="bg-white pb-10">
       <div className="container mx-auto">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-[40px] font-normal">{currentCarouselItem.title}</h2>
+          <h2 className="text-[40px] text-[#002D4F] font-semibold">{currentCarouselItem.title}</h2>
           <div className="flex items-center space-x-4">
             <div className='navigation cursor-pointer ' onClick={handlePrevClick}>
             ‹
@@ -72,11 +72,9 @@ const CarouselSection = () => {
             <div className='navigation cursor-pointer' onClick={handleNextClick}>
             ›
             </div>
-            {/* <FaAngleLeft className="cursor-pointer h-[60px] w-[10px] " color='#C1A868' onClick={handlePrevClick} />
-            <FaAngleRight className="cursor-pointer" color='#C1A868' onClick={handleNextClick} /> */}
           </div>
         </div>
-        <hr className="mb-4 h-1 bg-[#6C757D]" />
+        <hr className="mb-4 border-2 bg-[#6C757D ]" />
         <div className='flex justify-between gap-6'>
           <div className=''>
             <img className='h-[800px]' src={car1} alt="" />
@@ -114,17 +112,7 @@ const CarouselSection = () => {
             </div>
             <div>
               <img src={car3} alt="" />
-              {/* <div className='flex justify-center absolute right-1/2 top-[262px] translate-x-1/2 gap-1'>
-                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B]'>
-                  <FaGift />
-                </div>
-                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B]'>
-                  <FaShoppingBag />
-                </div>
-                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B]'>
-                  <FaEye />
-                </div>
-              </div> */}
+
               <div className='flex justify-center absolute translate-x-1/2 translate-y-[-20px] gap-1'>
 
                 <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] '>

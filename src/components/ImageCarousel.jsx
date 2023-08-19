@@ -15,43 +15,50 @@ const ImageCarousel = () => {
   const handleSlideChange = (index) => {
     setCurrentSlide(index);
   };
-  
- 
+
+
   return (
-    <div className="carousel-container mt-16 px-16">
+    <div className="carousel-container mb-44 px-16">
       <div className="flex justify-between items-center ">
-        <h2 className="text-2xl font-bold">Irresistible Deals</h2>
+        <h2 className="text-[40px] text-[#002D4F]">Table Talk</h2>
         <div className="flex justify-center mr-[20px] ">
           <div
             onClick={() => handleSlideChange(currentSlide === 0 ? 2 : currentSlide - 1)}
-           
+
             className="mr-2 navigation"
           >
             ‹
           </div>
           <div
-            onClick={() =>  handleSlideChange((currentSlide + 1) % 3)}
-            
+            onClick={() => handleSlideChange((currentSlide + 1) % 3)}
+
             className='navigation'
           >
             ›
           </div>
         </div>
       </div>
-      <hr className="mb-4" />
-      {/* <Carousel
-        selectedItem={currentSlide}
-        onChange={(index) => handleSlideChange(index)}
-        showThumbs={false}
-        infiniteLoop
-      >
-
-      </Carousel> */}
-      <div className='flex justify-center gap-10'>
+      <hr className="mb-5 mt-2 border-2 bg-[#6C757D ]" />
+      <div className='flex justify-center gap-10 mt-14'>
 
         <div className='flex justify-center flex-col'>
           <img src={table1} alt="Image 1" />
-          <p className='text-[#002D4F] font-bold text-center text-xl mt-5 mb-5'>Dinner Plates:
+          <p className='text-[#002D4F] font-bold text-center text-xl my-5 '>
+            Dinner Plates:
+            Choosing the Perfect Tableware for Your Meals
+          </p>
+          <p className='text-center mb-5 '>
+            Some quick example text to build on the card title and make up the bulk of the card's content.
+          </p>
+          <div className='flex justify-center'>
+            <button className='bg-[#002D4F] text-white  py-2 px-8' >
+              Read More
+            </button>
+          </div>
+        </div>
+        <div className='flex justify-center flex-col'>
+          <img src={table3} alt="Image 1" />
+          <p className='text-[#002D4F] font-bold text-center text-xl my-5'>Dinner Plates:
             Choosing the Perfect Tableware for Your Meals
           </p>
           <p className='text-center mb-5'>
@@ -65,32 +72,18 @@ const ImageCarousel = () => {
         </div>
         <div className='flex justify-center flex-col'>
           <img src={table2} alt="Image 1" />
-          <p className='text-[#002D4F] font-bold text-center text-xl mt-5 mb-5'>The Ultimate Guide to Cigar Cutters :
-            A Perfect Slice for Your Smoking Pleasure
+          <p className='text-[#002D4F] font-bold text-center text-xl my-5'>Dinner Plates:
+            Choosing the Perfect Tableware for Your Meals
           </p>
           <p className='text-center mb-5'>
-            Some quick example text to build on the card title and make up the bulk of the card's content.          </p>
+            Some quick example text to build on the card title and make up the bulk of the card's content.
+          </p>
           <div className='flex justify-center'>
             <button className='bg-[#002D4F] text-white  py-2 px-8' >
               Read More
             </button>
           </div>
         </div>
-        <div className='flex justify-center flex-col text-center'>
-          <img src={table3} alt="Image 1" />
-          <p className='text-[#002D4F] font-bold text-xl mt-5 mb-5'>Coffee Cups:
-            The Perfect Companion for Your Daily Brew
-          </p>
-          <p className='text-center mb-5'>
-            Some quick example text to build on the card title and make up the bulk of the cards content.
-          </p>
-          <div className='flex justify-center'>
-            <button className='bg-[#002D4F] text-white  py-2 px-8 '  >
-              Read More
-            </button>
-          </div>
-        </div>
-
       </div>
 
     </div>

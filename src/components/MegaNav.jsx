@@ -159,8 +159,8 @@ const MegaNav = () => {
       };
     
       return (
-        <nav className="flex justify-self-auto  p-2 bg-[#A19C97] text-white  relative ">
-          <div className="flex space-x-4">
+        <nav className="flex justify-center items-center p-2 bg-[#A19C97] text-white  relative ">
+          <div className="flex justify-center gap-7 space-x-4">
             {megaMenuItems.map((item, index) => (
               <div
                 key={item.title}
