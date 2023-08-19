@@ -25,9 +25,9 @@ const RightContainer = () => {
 
     return (
         <div className='w-1/2 flex flex-col  items-center justify-center mr-[40px]'>
-            <p className='loginheading mt-[-10px] pb-[20px]'>Login</p>
-            <p className='subheading pb-[60px] text-[30px] mt-[3px]'>Dont have an account yet?<span className='text-[#8D7C3B] cursor-pointer' onClick={() => navigate('/signup')}><u>Register</u></span></p>
-            <div className='flex flex-col gap-10 relative h-[130px]'>
+            <p className='loginheading mt-[-10px] pb-[20px] text-[50px]'>Login</p>
+            <p className='subheading pb-[60px] text-[25px] mt-[3px]'>Dont have an account yet? <span className='text-[#8D7C3B] cursor-pointer' onClick={() => navigate('/signup')}><u>Register</u></span></p>
+            <div className='flex flex-col gap-8 relative h-[130px]'>
                <Input type="email" placeholder="Enter your Email" className="placeholder" value={email} onChange={(event) => setEmail(event.target.value)} />
                <Input type={showPassword ? 'text' : 'password'} placeholder='Password' value={password} onChange={(event) => setPassword(event.target.value)} />
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="17" viewBox="0 0 25 17" fill="none" className='absolute top-[120px] right-[20px]' onClick={() => setShowPassword(!showPassword)}>
@@ -39,7 +39,7 @@ const RightContainer = () => {
                 width: "536px",
             }}>
                 <div className='flex  pt-[30px] gap-3'>
-                    <input type="checkbox" name="" id="" />
+                    <input  type="checkbox" name="" id="" />
                     <p style={{
                         color: "#162C35",
                         fontFamily: "PT Sans",
@@ -82,7 +82,7 @@ const RightContainer = () => {
                     <p className='logotext'>Facebook</p>
                 </div>
             </div>
-            <div className='flex justify-around gap-[30px] mt-[2rem]' style={{textDecoration:"underline"}}>
+            <div className='flex justify-around gap-[30px] mt-[2rem] mb-16 text-[#002D4F]' style={{textDecoration:"underline"}}>
                 <p>Order Tracking</p>
                 <p>Easy Return</p>
                 <p>Support</p>
