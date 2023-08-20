@@ -1,6 +1,9 @@
 import React from 'react'
 import { FaEye, FaGift, FaRegStar, FaShoppingBag } from 'react-icons/fa';
 import new1 from '../assets/new.png';
+import eye from '../assets/eye.png';
+import gift from '../assets/gift.png';
+import shopping from '../assets/shopping.png';
 const ItemCard = (props) => {
 
     
@@ -8,7 +11,7 @@ const ItemCard = (props) => {
 
     return (
         <div className='w-[360px] rounded-[10px] h-[ 610px]  ' style={{
-            // boxShadow: '0px 2px 6px 0px rgba(0, 0, 0, 0.10)',
+            boxShadow: '0px 2px 6px 0px rgba(0, 0, 0, 0.10)',
             height: props.height,
             width: props.width,
             backgroundColor: props.bgColor,
@@ -57,39 +60,39 @@ const ItemCard = (props) => {
                 <p className='absolute top-[23px] right-[13px] text-white'>{props.detail}</p>
             </div>
 
-            <div className='flex justify-center    translate-y-[-20px] gap-4 '>
+            <div className='flex justify-center absolute translate-x-[55px] translate-y-[-20px] gap-3 ' style={{marginLeft:props.iconsMarginLeft , marginTop:props.iconsMarginTop}}>
 
-                <div className='flex h-[55px] w-[55px] rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hover:bg-[#002D4F]'>
-                    <FaGift />
+                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hover:bg-[#002D4F]'>
+                  <img src={shopping} alt="" className='p-2 ' />
                 </div>
-                <div className='flex h-[55px] w-[55px] rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hover:bg-[#002D4F]'>
-                    <FaShoppingBag />
+                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hover:bg-[#002D4F]'>
+                  <img src={gift} alt="" className='p-2 ' />
                 </div>
-                <div className='flex h-[55px] w-[55px] rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hover:bg-[#002D4F]'>
-                    <FaEye />
+                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hover:bg-[#002D4F]'>
+                  <img src={eye} alt="" className='p-2' />
                 </div>
-            </div>
+              </div>
 
         {props.favIconPos !== "lvp" ? (
             <>
-            <div className='text-[#8D7C3B] flex justify-between text-[18px] pl-5 ' >
+            <div className='text-[#8D7C3B] flex justify-between text-[18px] pl-5 ' style={{marginTop:props.textMarginTop}} >
                 <p>{props.title}</p>
             </div>
             <hr className='border-[#F69785] mb-1 mt-1 border-2' />
 
-            <p className='text-[#9C9687] text-[25px] text-left pl-5'>{props.description}</p>
+            <p className='text-[#9C9687] text-[25px] text-left pl-5 '>{props.description}</p>
             <p className='text-[#002D4F] font-normal  text-[18px] text-left pl-5'>{props.price} AED</p>
             </>
         ) : (
-            <>
-            <div className='text-[#8D7C3B] flex justify-between text-[15px] ' >
+            <div className='ml-[20px]'>
+            <div className='text-[#8D7C3B] flex justify-between text-[18px] pt-[25px] ' >
                 <p>{props.title}</p>
             </div>
-            <hr className='border-[#F69785] mb-1 mt-1 border-2' />
+            <hr className='border-[#F69785] mb-1 mt-3 border-2' />
 
-            <p className='text-[#9C9687] text-[20px] '>{props.description}</p>
-            <p className='text-[#002D4F] font-bold text-[15px]'>{props.price} AED</p>
-            </>
+            <p className='text-[#9C9687] text-[20px] pt-[5px]'>{props.description}</p>
+            <p className='text-[#002D4F] font-bold text-[15px] pt-[5px]'>{props.price} AED</p>
+            </div>
 
         )}
             

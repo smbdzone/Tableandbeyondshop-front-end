@@ -1,8 +1,9 @@
 .newArrival{
-    background: url("../../assets/newarrivalbg.png") ;
-    background-repeat: no-repeat;
+    background: url("../../assets/newarrival.jpeg") ;
+    /* background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    background-color: rgba(251, 248, 248, 0.977);
+    background-position: center; */
+    /* background-color: rgba(251, 248, 248, 0.977);
     height: 100%;
+    width: 100%; */
 }

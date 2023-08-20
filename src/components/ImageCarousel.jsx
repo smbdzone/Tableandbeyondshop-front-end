@@ -9,6 +9,45 @@ import table2 from '../assets/table2.png';
 import table3 from '../assets/table3.png';
 
 
+const dummyCards = [
+  {
+    id: 1,
+    image: table1,
+    title: 'The Ultimate Guide to Cigar Cutters:',
+    description: 'A Perfect Slice for Your Smoking Pleasure',
+    extraText: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+  },
+  {
+    id: 2,
+    image: table3,
+    title: 'The Ultimate Guide to Cigar Cutters:',
+    description: 'A Perfect Slice for Your Smoking Pleasure',
+    extraText: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+  },
+  {
+    id: 3,
+    image: table2,
+    title: 'Coffee Cups:',
+    description: 'The Perfect Companion for Your Daily Brew',
+    extraText: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+  },
+  {
+    id: 4,
+    image: table1,
+    title: 'The Ultimate Guide to Cigar Cutters:',
+    description: 'A Perfect Slice for Your Smoking Pleasure',
+    extraText: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+  },
+  {
+    id: 5,
+    image: table3,
+    title: 'The Ultimate Guide to Cigar Cutters:',
+    description: 'A Perfect Slice for Your Smoking Pleasure',
+    extraText: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+  }
+];
+
+
 const ImageCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -25,14 +64,14 @@ const ImageCarousel = () => {
           <div
             onClick={() => handleSlideChange(currentSlide === 0 ? 2 : currentSlide - 1)}
 
-            className="mr-2 navigation"
+            className="mr-2 navigation text-[60px] font-medium"
           >
             ‹
           </div>
           <div
             onClick={() => handleSlideChange((currentSlide + 1) % 3)}
 
-            className='navigation'
+            className='navigation text-[60px] font-medium'
           >
             ›
           </div>
@@ -40,54 +79,34 @@ const ImageCarousel = () => {
       </div>
       <hr className="mb-5 mt-2 border-2 bg-[#6C757D ]" />
       <div className='flex justify-center gap-10 mt-14'>
-
-        <div className='flex justify-center flex-col'>
-          <img src={table1} alt="Image 1" />
-          <p className='text-[#002D4F] font-bold text-center text-xl my-5 '>
-            Dinner Plates:
-            Choosing the Perfect Tableware for Your Meals
-          </p>
-          <p className='text-center mb-5 '>
-            Some quick example text to build on the card title and make up the bulk of the card's content.
-          </p>
-          <div className='flex justify-center'>
-            <button className='bg-[#002D4F] text-white  py-2 px-8' >
-              Read More
-            </button>
+        {dummyCards.slice(currentSlide, currentSlide + 3).map((card) => (
+          <div key={card.id} className='flex justify-center flex-col'>
+            <img src={card.image} alt={`Image ${card.id}`} className='mt-[-30px]' />
+            <p className='text-[#002D4F] font-bold text-center text-[20px] leading-[28.8px] my-5'>
+              <span className='text-[#002D4F] text-[25px] font-bold leading-[28.8px]'>
+                {card.title}
+              </span><br />
+              {card.description}
+            </p>
+            <p className='text-center mb-5 text-black text-[18px] font-normal leading-[26px]'>
+              {card.extraText}
+            </p>
+            <div className='flex justify-center'>
+              <button className='bg-[#002D4F] text-white text-[18px] py-2 px-8'>
+                Read More
+              </button>
+            </div>
           </div>
-        </div>
-        <div className='flex justify-center flex-col'>
-          <img src={table3} alt="Image 1" />
-          <p className='text-[#002D4F] font-bold text-center text-xl my-5'>Dinner Plates:
-            Choosing the Perfect Tableware for Your Meals
-          </p>
-          <p className='text-center mb-5'>
-            Some quick example text to build on the card title and make up the bulk of the card's content.
-          </p>
-          <div className='flex justify-center'>
-            <button className='bg-[#002D4F] text-white  py-2 px-8' >
-              Read More
-            </button>
-          </div>
-        </div>
-        <div className='flex justify-center flex-col'>
-          <img src={table2} alt="Image 1" />
-          <p className='text-[#002D4F] font-bold text-center text-xl my-5'>Dinner Plates:
-            Choosing the Perfect Tableware for Your Meals
-          </p>
-          <p className='text-center mb-5'>
-            Some quick example text to build on the card title and make up the bulk of the card's content.
-          </p>
-          <div className='flex justify-center'>
-            <button className='bg-[#002D4F] text-white  py-2 px-8' >
-              Read More
-            </button>
-          </div>
-        </div>
+        ))}
       </div>
-
     </div>
   );
 };
 
 export default ImageCarousel;
+
+
+
+
+
+

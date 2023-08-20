@@ -1,0 +1,31 @@
+.fullContainer{
+    font-family: PT Sans;
+    /* overflow-x: auto; */
+}
+
+.para{
+    color: #58595B;
+font-family: PT Sans;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 29px; /* 145% */
+}
+
+.detailsDiv{
+    border-radius: 5px;
+background: #FFF;
+box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.10);
+border-color:black;
+
+}
+
+.reviewBtn{
+    border-radius: 5px;
+border: 1px solid #A6C3DB;
+background: #FFF;
+box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.10);
+width: 238px;
+height: 50px;
+flex-shrink: 0;
+}

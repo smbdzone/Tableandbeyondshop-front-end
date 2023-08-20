@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { FaAngleDown } from 'react-icons/fa'; // Make sure to install react-icons
+import car2 from '../assets/car2.png';
 
 const MegaNav = () => {
     const megaMenuItems = [
@@ -15,6 +16,7 @@ const MegaNav = () => {
               links: ['Brand 1', 'Brand 2', 'Brand 3'],
             },
           ],
+          img:car2
         },
         {
           title: 'Bed & Bath',
@@ -28,6 +30,7 @@ const MegaNav = () => {
               links: ['Brand A', 'Brand B', 'Brand C'],
             },
           ],
+          img:car2
         },
         {
           title: 'Drinking Accessories',
@@ -41,6 +44,7 @@ const MegaNav = () => {
               links: ['Brand X', 'Brand Y', 'Brand Z'],
             },
           ],
+          img:car2
         },
         {
           title: 'Cigar Room',
@@ -54,6 +58,7 @@ const MegaNav = () => {
               links: ['Brand Cigar 1', 'Brand Cigar 2', 'Brand Cigar 3'],
             },
           ],
+          img:car2
         },
         {
           title: 'Cheese Room',
@@ -67,6 +72,7 @@ const MegaNav = () => {
               links: ['Brand Cheese 1', 'Brand Cheese 2', 'Brand Cheese 3'],
             },
           ],
+          img:car2
         },
         {
           title: 'Lighting',
@@ -80,6 +86,7 @@ const MegaNav = () => {
               links: ['Brand Lighting 1', 'Brand Lighting 2', 'Brand Lighting 3'],
             },
           ],
+          img:car2
         },
         {
           title: 'Kitchen',
@@ -93,6 +100,7 @@ const MegaNav = () => {
               links: ['Brand Kitchen 1', 'Brand Kitchen 2', 'Brand Kitchen 3'],
             },
           ],
+          img:car2
         },
         {
           title: 'Party Necessities',
@@ -106,6 +114,7 @@ const MegaNav = () => {
               links: ['Brand Party 1', 'Brand Party 2', 'Brand Party 3'],
             },
           ],
+          img:car2
         },
         {
           title: 'On-the-Go',
@@ -119,6 +128,7 @@ const MegaNav = () => {
               links: ['Brand On-the-Go 1', 'Brand On-the-Go 2', 'Brand On-the-Go 3'],
             },
           ],
+          img:car2
         },
         {
           title: 'Baby & Kids',
@@ -132,6 +142,7 @@ const MegaNav = () => {
               links: ['Brand Baby & Kids 1', 'Brand Baby & Kids 2', 'Brand Baby & Kids 3'],
             },
           ],
+          img:car2
         },
         {
           title: 'Gift Ideas',
@@ -145,6 +156,7 @@ const MegaNav = () => {
               links: ['Brand Gift Ideas 1', 'Brand Gift Ideas 2', 'Brand Gift Ideas 3'],
             },
           ],
+          img:car2
         },
       ];
       
@@ -159,21 +171,22 @@ const MegaNav = () => {
       };
     
       return (
-        <nav className="flex justify-center items-center p-2 bg-[#A19C97] text-white  relative ">
-          <div className="flex justify-center gap-7 space-x-4">
+        <nav className="flex justify-between items-center py-4 bg-[#A19C97] text-white  relative  ">
+          <div className="flex justify-center gap-[46px] space-x-4 ml-10">
             {megaMenuItems.map((item, index) => (
               <div
                 key={item.title}
-                className=" group"
+                className=" text-[18px] p-[-2px]"
                 onMouseEnter={() => handleMouseEnter(index)}
                 
               >
                 <button className="cursor-pointer flex items-center">
-                  {item.title} <FaAngleDown className="ml-1" />
+                  {item.title}
+                   {/* <FaAngleDown className="ml-1" /> */}
                 </button>
                 {activeMenu === index && (
-                  <div className="absolute top-full left-0 bg-white text-gray-800 shadow-lg p-4 w-screen z-10" onMouseLeave={handleMouseLeave}>
-                    <div className="flex space-x-8" >
+                  <div className="absolute top-full left-1/3 bg-white text-gray-800 shadow-lg p-4 w-screen z-10 w-[50%]" onMouseLeave={handleMouseLeave}>
+                    <div className="flex justify-between space-x-8" >
                       {item.categories.map((category) => (
                         <div key={category.title} >
                           <h2 className="font-semibold">{category.title}</h2>
@@ -187,7 +200,9 @@ const MegaNav = () => {
                             ))}
                           </ul>
                         </div>
+                        
                       ))}
+                      <img src={item.img} alt="" />
                     </div>
                   </div>
                 )}

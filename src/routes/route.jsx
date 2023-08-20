@@ -7,6 +7,8 @@ import Login from "../pages/Login/Login";
 import SignUp from "../pages/SignUp/SignUp";
 import Dining from "../pages/Dining/Dining";
 
+import AddtoCart from "../pages/AddtoCart/AddtoCart";
+
 
 
 const router = createBrowserRouter([
@@ -29,6 +31,10 @@ const router = createBrowserRouter([
   {
     path: "*",
     element: <div>Not Found</div>,
+  },
+  {
+    path: "/add-to-cart",
+    element: <AddtoCart />,
   }
 ]);
 

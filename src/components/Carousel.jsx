@@ -9,6 +9,9 @@ import car3 from '../assets/car3.png';
 import car5 from '../assets/car5.png';
 import car6 from '../assets/car6.png';
 import './Carousel.css';
+import shopping from "../assets/shopping.png";
+import gift from "../assets/gift.png";
+import eye from "../assets/eye.png";
 
 
 const CarouselSection = () => {
@@ -64,38 +67,41 @@ const CarouselSection = () => {
     <section className="bg-white pb-10">
       <div className="container mx-auto">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-[40px] text-[#002D4F] font-semibold">{currentCarouselItem.title}</h2>
+          <h2 className="text-[40px] text-[#002D4F] font-normal">{currentCarouselItem.title}</h2>
           <div className="flex items-center space-x-4">
             <div className='navigation cursor-pointer ' onClick={handlePrevClick}>
-            ‹
+              ‹
             </div>
             <div className='navigation cursor-pointer' onClick={handleNextClick}>
-            ›
+              ›
             </div>
           </div>
         </div>
-        <hr className="mb-4 border-2 bg-[#6C757D ]" />
-        <div className='flex justify-between gap-6'>
+        <svg xmlns="http://www.w3.org/2000/svg" width="1320" height="1" viewBox="0 0 1320 1" fill="none" className='mb-[30px]' >
+          <path d="M0 0.5H1320" stroke="#6C757D" />
+        </svg>
+        <div className='flex justify-center gap-[100px] '>
           <div className=''>
             <img className='h-[800px]' src={car1} alt="" />
           </div>
-          <div className='flex flex-col justify-between gap-6' >
-            <div className='relative'>
+          <div className='flex flex-col justify-between w-fit' >
+            <div className='relative '>
               <img src={car2} alt="" />
-              <div className='flex justify-center absolute right-1/2 top-[262px] translate-x-1/2 gap-1'>
-                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hoverbtn hover:bg-[#002D4F]'>
-                  <FaGift />
+              <div className='flex justify-center absolute translate-x-[55px] translate-y-[-20px] gap-3'>
+
+                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hover:bg-[#002D4F]'>
+                  <img src={shopping} alt="" className='h-[40%] w-[40%] ' />
                 </div>
-                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hoverbtn hover:bg-[#002D4F]'>
-                  <FaShoppingBag />
+                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hover:bg-[#002D4F]'>
+                  <img src={gift} alt="" className='h-[40%] w-[40%] ' />
                 </div>
-                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hoverbtn hover:bg-[#002D4F]'>
-                  <FaEye />
+                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hover:bg-[#002D4F]'>
+                  <img src={eye} alt="" className='h-[30%] w-[40%] ' />
                 </div>
               </div>
 
-              <div className='text-[#8D7C3B] flex justify-between mt-6' >
-                <p>Description</p>
+              <div className='text-[#8D7C3B] flex justify-between mt-5' >
+                <p>Dining</p>
                 <div className='flex mt-1'>
                   <FaRegStar />
                   <FaRegStar />
@@ -104,29 +110,29 @@ const CarouselSection = () => {
                   <FaRegStar />
                 </div>
               </div>
-              <hr className='border-[#F69785] mb-2 mt-1 border-2' />
+              <hr className='border-[#F69785] mb-2 mt-1 border-2 ' />
 
-              <p className='text-[#9C9687] text-xs'>Luxurious Bag Decorated</p>
+              <p className='text-[#9C9687] text-sm'>Luxurious Bag Decorated</p>
               <p className='text-[#002D4F] font-bold text-sm'>500 AED</p>
 
             </div>
-            <div>
+            <div  className=''>
               <img src={car3} alt="" />
 
-              <div className='flex justify-center absolute translate-x-1/2 translate-y-[-20px] gap-1'>
+              <div className='flex justify-center absolute translate-x-[55px] translate-y-[-20px] gap-3'>
 
-                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] '>
-                  <FaGift />
+                <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hover:bg-[#002D4F]'>
+                  <img src={shopping} alt="" className='h-[40%] w-[40%] ' />
                 </div>
                 <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hover:bg-[#002D4F]'>
-                  <FaShoppingBag />
+                  <img src={gift} alt="" className='h-[40%] w-[40%] ' />
                 </div>
                 <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hover:bg-[#002D4F]'>
-                  <FaEye />
+                  <img src={eye} alt="" className='h-[30%] w-[40%] ' />
                 </div>
               </div>
               <div className='text-[#8D7C3B] flex justify-between mt-4' >
-                <p>Description</p>
+                <p>Dining</p>
                 <div className='flex mt-1'>
                   <FaRegStar />
                   <FaRegStar />
@@ -137,7 +143,7 @@ const CarouselSection = () => {
               </div>
               <hr className='border-[#F69785] mb-2 mt-1 border-2' />
 
-              <p className='text-[#9C9687] text-xs'>Luxurious Bag Decorated</p>
+              <p className='text-[#9C9687] text-sm'>Luxurious Bag Decorated</p>
               <p className='text-[#002D4F] font-bold text-sm'>500 AED</p>
 
             </div>
@@ -146,16 +152,16 @@ const CarouselSection = () => {
 
             <div>
               <img src={car6} alt="" />
-              <div className='flex justify-center absolute translate-x-1/2 translate-y-[-20px] gap-1'>
+              <div className='flex justify-center absolute translate-x-[55px] translate-y-[-20px] gap-3'>
 
                 <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hover:bg-[#002D4F]'>
-                  <FaGift />
+                  <img src={shopping} alt="" className='h-[40%] w-[40%] ' />
                 </div>
                 <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hover:bg-[#002D4F]'>
-                  <FaShoppingBag />
+                  <img src={gift} alt="" className='h-[40%] w-[40%] ' />
                 </div>
                 <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hover:bg-[#002D4F]'>
-                  <FaEye />
+                  <img src={eye} alt="" className='h-[30%] w-[40%] ' />
                 </div>
               </div>
 
@@ -165,7 +171,7 @@ const CarouselSection = () => {
 
               </div>
               <div className='text-[#8D7C3B] flex justify-between mt-5' >
-                <p>Description</p>
+                <p>Dining</p>
                 <div className='flex mt-1'>
                   <FaRegStar />
                   <FaRegStar />
@@ -174,28 +180,28 @@ const CarouselSection = () => {
                   <FaRegStar />
                 </div>
               </div>
-              <hr className='border-[#F69785] mb-2 mt-1 border-2' />
+              <hr className='border-[#F69785] mb-2 mt-1 border-2 ' />
 
-              <p className='text-[#9C9687] text-xs'>Luxurious Bag Decorated</p>
+              <p className='text-[#9C9687] text-sm'>Luxurious Bag Decorated</p>
               <p className='text-[#002D4F] font-bold text-sm'>500 AED</p>
 
             </div>
             <div>
               <img src={car5} alt="" />
-              <div className='flex justify-center absolute translate-x-1/2 translate-y-[-20px] gap-1'>
+              <div className='flex justify-center absolute translate-x-[55px] translate-y-[-20px] gap-3'>
 
                 <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hover:bg-[#002D4F]'>
-                  <FaGift />
+                  <img src={shopping} alt="" className='h-[40%] w-[40%] ' />
                 </div>
                 <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hover:bg-[#002D4F]'>
-                  <FaShoppingBag />
+                  <img src={gift} alt="" className='h-[40%] w-[40%] ' />
                 </div>
                 <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hover:bg-[#002D4F]'>
-                  <FaEye />
+                  <img src={eye} alt="" className='h-[30%] w-[40%] ' />
                 </div>
               </div>
               <div className='text-[#8D7C3B] flex justify-between mt-5' >
-                <p>Description</p>
+                <p>Dining</p>
                 <div className='flex mt-1'>
                   <FaRegStar />
                   <FaRegStar />
@@ -206,7 +212,7 @@ const CarouselSection = () => {
               </div>
               <hr className='border-[#F69785] mb-2 mt-1 border-2' />
 
-              <p className='text-[#9C9687] text-xs'>Luxurious Bag Decorated</p>
+              <p className='text-[#9C9687] text-sm'>Luxurious Bag Decorated</p>
               <p className='text-[#002D4F] font-bold text-sm'>500 AED</p>
 
             </div>
@@ -214,20 +220,20 @@ const CarouselSection = () => {
           <div className='flex flex-col justify-between' >
             <div>
               <img src={car2} alt="" />
-              <div className='flex justify-center absolute translate-x-1/2 translate-y-[-20px] gap-1'>
+              <div className='flex justify-center absolute translate-x-[55px] translate-y-[-20px] gap-3'>
 
                 <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hover:bg-[#002D4F]'>
-                  <FaGift />
+                  <img src={shopping} alt="" className='h-[40%] w-[40%] ' />
                 </div>
                 <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hover:bg-[#002D4F]'>
-                  <FaShoppingBag />
+                  <img src={gift} alt="" className='h-[40%] w-[40%] ' />
                 </div>
                 <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hover:bg-[#002D4F]'>
-                  <FaEye />
+                  <img src={eye} alt="" className='h-[30%] w-[40%] ' />
                 </div>
               </div>
               <div className='text-[#8D7C3B] flex justify-between mt-5' >
-                <p>Description</p>
+                <p>Dining</p>
                 <div className='flex mt-1'>
                   <FaRegStar />
                   <FaRegStar />
@@ -238,27 +244,27 @@ const CarouselSection = () => {
               </div>
               <hr className='border-[#F69785] mb-2 mt-1 border-2' />
 
-              <p className='text-[#9C9687] text-xs'>Luxurious Bag Decorated</p>
+              <p className='text-[#9C9687] text-sm'>Luxurious Bag Decorated</p>
               <p className='text-[#002D4F] font-bold text-sm'>500 AED</p>
 
             </div>
             <div>
               <img src={car6} alt="" />
-              <div className='flex justify-center absolute translate-x-1/2 translate-y-[-20px] gap-1'>
+              <div className='flex justify-center absolute translate-x-[55px] translate-y-[-20px] gap-3'>
 
                 <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hover:bg-[#002D4F]'>
-                  <FaGift />
+                  <img src={shopping} alt="" className='h-[40%] w-[40%] ' />
                 </div>
                 <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hover:bg-[#002D4F]'>
-                  <FaShoppingBag />
+                  <img src={gift} alt="" className='h-[40%] w-[40%] ' />
                 </div>
                 <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hover:bg-[#002D4F]'>
-                  <FaEye />
+                  <img src={eye} alt="" className='h-[30%] w-[40%] ' />
                 </div>
               </div>
 
               <div className='text-[#8D7C3B] flex justify-between mt-5' >
-                <p>Description</p>
+                <p>Dining</p>
                 <div className='flex mt-1'>
                   <FaRegStar />
                   <FaRegStar />
@@ -269,7 +275,7 @@ const CarouselSection = () => {
               </div>
               <hr className='border-[#F69785] mb-2 mt-1 border-2' />
 
-              <p className='text-[#9C9687] text-xs'>Luxurious Bag Decorated</p>
+              <p className='text-[#9C9687] text-sm'>Luxurious Bag Decorated</p>
               <p className='text-[#002D4F] font-bold text-sm'>500 AED</p>
 
             </div>
@@ -286,7 +292,7 @@ const CarouselSection = () => {
               {currentCarouselItem.images.map((image, index) => (
                 <div key={index}>
                   <img src={image.src} alt={currentCarouselItem.title} />
-                  <p className="mt-2">{image.description}</p>
+                  <p className="mt-2">{image.Dining}</p>
                 </div>
               ))}
             </Carousel>

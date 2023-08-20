@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+
 .navigation{
     color: #C1A868;
 text-align: center;
@@ -8,3 +11,8 @@ font-weight: 400;
 line-height: 60px; /* 150% */
 cursor: pointer;
 }
+
+.image:hover{
+    background-color: "#002D4F";
+}
+

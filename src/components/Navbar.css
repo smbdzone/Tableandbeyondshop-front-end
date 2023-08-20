@@ -1,5 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
+.tb{
+  color: #003F53;
+font-family: Montserrat;
+
+line-height: 25px; /* 129.412% */
+letter-spacing: 2.04px;
+
+
+}
 
 .input-placeholder-transition[type="text"]::placeholder {
     color: white !important;
   }
+
+  

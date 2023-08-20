@@ -36,11 +36,11 @@ const Navbar = () => {
   return (
     <nav className="flex justify-between items-center p-4 bg-[#A6C3DB] text-#003F53">
       <div className="flex items-center ml-5">
-        <div className="text-2xl font-bold">Table & Beyond</div>
+        <b><div className="tb font-bold">Table & Beyond</div></b>
         <div className='mr-5 ml-5 w-12 h-10'>
             <img src={logo} alt="logo" />
         </div>
-        <div className="text-2xl font-bold ">shop</div>
+        <div className=" tb font-bold text-[17px]">shop</div>
       </div>
       <div className="flex items-center mr-5">
         <div className="relative flex mr-3  ">

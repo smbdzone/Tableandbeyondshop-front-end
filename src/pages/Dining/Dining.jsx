@@ -35,8 +35,8 @@ const Dining = () => {
         {
             id: 1,
             src: car5,
-            title: "very nice",
-            description: "very nice",
+            title: "Dinnerware",
+            description: "Acccompanist Bowl Square",
             price: 500,
             detail: "New",
 
@@ -44,8 +44,8 @@ const Dining = () => {
         {
             id: 2,
             src: car2,
-            title: "very nice",
-            description: "very nice",
+            title: "Dinnerware",
+            description: "Acccompanist",
             price: 500,
             detail: "New",
 
@@ -53,8 +53,8 @@ const Dining = () => {
         {
             id: 3,
             src: car3,
-            title: "very nice",
-            description: "very nice",
+            title: "Dinnerware",
+            description: "Acccompanist",
             price: 500,
             detail: "New",
 
@@ -62,8 +62,8 @@ const Dining = () => {
         {
             id: 4,
             src: car4,
-            title: "very nice",
-            description: "very nice",
+            title: "Dinnerware",
+            description: "Acccompanist",
             price: 500,
             detail: "New",
 
@@ -71,8 +71,8 @@ const Dining = () => {
         {
             id: 5,
             src: car5,
-            title: "very nice",
-            description: "very nice",
+            title: "Dinnerware",
+            description: "Acccompanist",
             price: 500,
             detail: "New",
 
@@ -80,7 +80,7 @@ const Dining = () => {
         {
             id: 6,
             src: car2,
-            title: "very nice",
+            title: "Dinnerware",
             description: "veryyyy nice",
             price: 500,
             detail: "New",
@@ -118,63 +118,63 @@ const Dining = () => {
     const { width: cardWidth, height: cardHeight } = calculateCardSize();
 
     const openModal = () => {
-        if(document.getElementsByClassName('myModal')[0].style.display === 'block'){
+        if (document.getElementsByClassName('myModal')[0].style.display === 'block') {
             document.getElementsByClassName('myModal')[0].style.display = 'none';
             return;
-        }else{
+        } else {
             document.getElementsByClassName('myModal')[0].style.display = 'block';
-        console.log('modal opened');
+            console.log('modal opened');
 
         }
-        
+
     }
 
 
     return (
-        <div style={{overflowX:'hidden'}}>
+        <div style={{ overflowX: 'hidden' }}>
             <Navbar />
             <MegaNav />
             <ContactBar />
             <div className="flex flex-col text-center gap-[40px] mt-[30px] ">
                 <p className='heading'>Home / Dining</p>
                 <p className='subheading'>Dining</p>
-                <div className='flex flex-row justify-center items-center gap-4'>
+                <div className='flex flex-row justify-center items-center gap-2'>
                     <div className='flex flex-col'>
-                        <img src={Dinnerware} alt="" className='w-[138px] h-[132px]' />
+                        <img src={Dinnerware} alt="" className='w-[108px] h-[102px]' />
                         <p className='text-[#002D4F] font-bold text-[18px]'>Dinnerware</p>
                     </div>
                     <div className='flex flex-col'>
-                        <img src={Barware} alt="" className='w-[138px] h-[132px]' />
+                        <img src={Barware} alt="" className='w-[108px] h-[102px]' />
                         <p className='text-[#002D4F] font-bold text-[18px]'>Barware</p>
                     </div>
                     <div className='flex flex-col'>
-                        <img src={Flatware} alt="" className='w-[138px] h-[132px]' />
+                        <img src={Flatware} alt="" className='w-[108px] h-[102px]' />
                         <p className='text-[#002D4F] font-bold text-[18px]'>Flatware</p>
 
                     </div>
                     <div className='flex flex-col'>
-                        <img src={Glassware} alt="" className='w-[138px] h-[132px]' />
+                        <img src={Glassware} alt="" className='w-[108px] h-[102px]' />
                         <p className='text-[#002D4F] font-bold text-[18px]'>Glassware</p>
                     </div>
                     <div className='flex flex-col'>
-                        <img src={Dinnerware} alt="" className='w-[138px] h-[132px]' />
+                        <img src={Dinnerware} alt="" className='w-[108px] h-[102px]' />
                         <p className='text-[#002D4F] font-bold text-[18px]'>Dinnerware</p>
                     </div>
                     <div className='flex flex-col'>
-                        <img src={Barware} alt="" className='w-[138px] h-[132px]' />
+                        <img src={Barware} alt="" className='w-[108px] h-[102px]' />
                         <p className='text-[#002D4F] font-bold text-[18px]'>Barware</p>
                     </div>
                     <div className='flex flex-col'>
-                        <img src={Flatware} alt="" className='w-[138px] h-[132px]' />
+                        <img src={Flatware} alt="" className='w-[108px] h-[102px]' />
                         <p className='text-[#002D4F] font-bold text-[18px]'>Flatware</p>
 
                     </div>
                     <div className='flex flex-col'>
-                        <img src={Glassware} alt="" className='w-[138px] h-[132px]' />
+                        <img src={Glassware} alt="" className='w-[138px] h-[102px]' />
                         <p className='text-[#002D4F] font-bold text-[18px]'>Glassware</p>
                     </div>
                     <div className='flex flex-col'>
-                        <img src={Glassware} alt="" className='w-[138px] h-[132px]' />
+                        <img src={Glassware} alt="" className='w-[108px] h-[102px]' />
                         <p className='text-[#002D4F] font-bold text-[18px]'>Glassware</p>
                     </div>
                 </div>
@@ -191,70 +191,128 @@ const Dining = () => {
                         <div className='flex items-center justify-center filterOptions'>
                             Sort
                         </div>
-                        <div className='flex items-center justify-center filterOptions' onClick={openModal}>
+                        <div className='flex items-center justify-around filterOptions' onClick={openModal}>
                             All filters
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                <path d="M17 4H8M11 14H2" stroke="#A19C97" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M14 17C15.6569 17 17 15.6569 17 14C17 12.3431 15.6569 11 14 11C12.3431 11 11 12.3431 11 14C11 15.6569 12.3431 17 14 17Z" stroke="#A19C97" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M4 7C5.65685 7 7 5.65685 7 4C7 2.34315 5.65685 1 4 1C2.34315 1 1 2.34315 1 4C1 5.65685 2.34315 7 4 7Z" stroke="#A19C97" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
                         </div>
                     </div>
-                    <div className='flex flex-row '>
-                        <p>View</p>
-                        <input type="range" value={gridQuantity} onChange={(e) => setgridQuantity(e.target.value)} min="3" max="6"/>
-                        <p>{gridQuantity} products</p>
+                    <div className='flex flex-row items-center gap-2  mr-[250px]'>
+                        <p className='text-[#58595B] text-[21px]'>View</p>
+                        <input type="range" className='' value={gridQuantity} onChange={(e) => setgridQuantity(e.target.value)} min="3" max="6" />
+                        <p className='text-[#58595B] text-[21px]'>{gridQuantity} products</p>
                     </div>
 
                 </div>
-                <div className={`grid grid-cols-${gridQuantity} gap-4 gap-y-20  mt-[50px]  justify-items-center w-full  `} >
-                    {/* Item Cards */}
-                    <ItemCard src={dish1} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="" width=""  />
-                    <ItemCard src={dish2} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="" width=""/>
-                    <ItemCard src={dish3} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="" width=""/>
-                    <ItemCard src={dish4} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="" width=""/>
-                    <ItemCard src={dish5} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="" width=""/>
-                    <ItemCard src={dish6} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="" width=""/>    
-                    <ItemCard src={dish7} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="" width=""/>
-                    <ItemCard src={dish8} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="" width=""/>
-                    <ItemCard src={dish9} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="" width=""/>
-                    {/* You can add more ItemCard components here */}
-                </div>
+
+                {gridQuantity == 3 ? (<div className="wrapper3  w-[85%]" >
+
+                    <ItemCard src={dish1} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} bgheight="450px" height="600px" width="480px" iconsMarginLeft="110px" textMarginTop="40px" />
+                    <ItemCard src={dish2} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} bgheight="450px" height="600px" width="480px" iconsMarginLeft="110px" textMarginTop="40px" />
+                    <ItemCard src={dish3} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="600px" bgheight="450px" width="480px" iconsMarginLeft="110px" textMarginTop="40px" />
+                    <ItemCard src={dish4} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="600px" bgheight="450px" width="480px" iconsMarginLeft="110px" textMarginTop="40px" />
+                    <ItemCard src={dish5} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="600px" bgheight="450px" width="480px" iconsMarginLeft="110px" textMarginTop="40px" />
+                    <ItemCard src={dish6} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="600px" bgheight="450px" width="480px" iconsMarginLeft="110px" textMarginTop="40px" />
+                    <ItemCard src={dish7} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="600px" bgheight="450px" width="480px" iconsMarginLeft="110px" textMarginTop="40px" />
+                    <ItemCard src={dish8} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="600px" bgheight="450px" width="480px" iconsMarginLeft="110px" textMarginTop="40px" />
+                    <ItemCard src={dish9} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="600px" bgheight="450px" width="480px" iconsMarginLeft="110px" textMarginTop="40px" />
+
+                </div>) : null}
+                {
+                    gridQuantity === "4" ? (
+                        <div className='wrapper4'>
+                            <ItemCard src={dish1} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="600px" bgheight="350px" width="400px" iconsMarginLeft="70px" textMarginTop="40px" />
+                            <ItemCard src={dish2} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="600px" bgheight="350px" width="400px" iconsMarginLeft="70px" textMarginTop="40px" />
+                            <ItemCard src={dish3} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="600px" bgheight="350px" width="400px" iconsMarginLeft="70px" textMarginTop="40px" />
+                            <ItemCard src={dish4} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="600px" bgheight="350px" width="400px" iconsMarginLeft="70px" textMarginTop="40px" />
+                            <ItemCard src={dish5} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="600px" bgheight="350px" width="400px" iconsMarginLeft="70px" textMarginTop="40px" />
+                            <ItemCard src={dish6} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="600px" bgheight="350px" width="400px" iconsMarginLeft="70px" textMarginTop="40px" />
+                            <ItemCard src={dish7} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="600px" bgheight="350px" width="400px" iconsMarginLeft="70px" textMarginTop="40px" />
+                            <ItemCard src={dish8} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="600px" bgheight="350px" width="400px" iconsMarginLeft="70px" textMarginTop="40px" />
+                            <ItemCard src={dish9} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="600px" bgheight="350px" width="400px" iconsMarginLeft="70px" textMarginTop="40px" />
+
+                        </div>
+                    ) : null
+                }
+                {
+                    gridQuantity === "5" ? (
+                        <div className='wrapper5'>
+                            <ItemCard src={dish1} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="100x" bgheight="300px" width="320px" iconsMarginLeft="30px" textMarginTop="20px" />
+                            <ItemCard src={dish2} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="500px" bgheight="300px" width="320px" iconsMarginLeft="30px" textMarginTop="20px" />
+                            <ItemCard src={dish3} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="500px" bgheight="300px" width="320px" iconsMarginLeft="30px" textMarginTop="20px" />
+                            <ItemCard src={dish4} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="500px" bgheight="300px" width="320px" iconsMarginLeft="30px" textMarginTop="20px" />
+                            <ItemCard src={dish5} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="500px" bgheight="300px" width="320px" iconsMarginLeft="30px" textMarginTop="20px" />
+                            <ItemCard src={dish6} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="500px" bgheight="300px" width="320px" iconsMarginLeft="30px" textMarginTop="20px" />
+                            <ItemCard src={dish7} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="500px" bgheight="300px" width="320px" iconsMarginLeft="30px" textMarginTop="20px" />
+                            <ItemCard src={dish8} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="500px" bgheight="300px" width="320px" iconsMarginLeft="30px" textMarginTop="20px" />
+                            <ItemCard src={dish9} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="500px" bgheight="300px" width="320px" iconsMarginLeft="30px" textMarginTop="20px" />
+
+                        </div>
+                    ) : null
+                }
+
+                {
+                    gridQuantity === "6" ? (
+                        <div className='wrapper6'>
+                            <ItemCard src={dish1} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="450px" bgheight="250px" width="260px" imgheight="70%" imgwidth="70%" textMarginTop="20px" />
+                            <ItemCard src={dish2} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="450px" bgheight="250px" width="260px" imgheight="70%" imgwidth="70%" textMarginTop="20px" />
+                            <ItemCard src={dish3} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="450px" bgheight="250px" width="260px" imgheight="70%" imgwidth="70%" textMarginTop="20px" />
+                            <ItemCard src={dish4} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="450px" bgheight="250px" width="260px" imgheight="70%" imgwidth="70%" textMarginTop="20px" />
+                            <ItemCard src={dish5} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="450px" bgheight="250px" width="260px" imgheight="70%" imgwidth="70%" textMarginTop="20px" />
+                            <ItemCard src={dish6} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="450px" bgheight="250px" width="260px" imgheight="70%" imgwidth="70%" textMarginTop="20px" />
+                            <ItemCard src={dish7} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="450px" bgheight="250px" width="260px" imgheight="70%" imgwidth="70%" textMarginTop="20px" />
+                            <ItemCard src={dish8} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="450px" bgheight="250px" width="260px" imgheight="70%" imgwidth="70%" textMarginTop="20px" />
+                            <ItemCard src={dish9} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} height="450px" bgheight="250px" width="260px" imgheight="70%" imgwidth="70%" textMarginTop="20px" />
+
+                        </div>
+                    ) : null
+                }
+
+
+
                 <div className='text-left relative ml-[50px]'>
                     <div className='flex w-full ' style={{
                         justifyContent: 'space-between'
-                
+
                     }}>
-                    <p className='Dheading'>Last Viewed Products</p>
-                    <div className="flex justify-center ">
-                        <button
-                            onClick={handlePrevPage}
-                            disabled={currentPage === 0}
-                            className="mr-2"
-                        >
-                            <FaChevronLeft size={20} />
-                        </button>
-                        <button
-                            onClick={handleNextPage}
-                            disabled={currentPage === totalPages - 1}
-                        >
-                            <FaChevronRight size={20} />
-                        </button>
-                    </div>
+                        <p className='Dheading'>Last Viewed Products</p>
+                        <div className="flex justify-center absolute right-[290px]">
+                            <button
+                                onClick={handlePrevPage}
+                                disabled={currentPage === 0}
+                                className="mr-2"
+                            >
+                                <FaChevronLeft size={20} color='#C1A868' />
+                            </button>
+                            <button
+                                onClick={handleNextPage}
+                                disabled={currentPage === totalPages - 1}
+                            >
+                                <FaChevronRight size={20} color='#C1A868' />
+                            </button>
+                        </div>
                     </div>
                     <hr></hr>
-                    <div className="grid grid-cols-4  mt-[50px] carousel pb-[100px]">
+                    <div className="grid grid-cols-4  mt-[50px] carousel pb-[100px] w-[85%]">
                         {/* Display sliced carousel items */}
                         {slicedItems.map((item) => (
-                            <ItemCard src={item.src} title={item.title} description={item.description} price={item.price} favIconPos="lvp" bgheight="318px" bgwidth="318px" imgheight="257px" imgwidth="257px" height="100%" width="318px" />
+                            <ItemCard src={item.src} title={item.title} description={item.description} price={item.price} favIconPos="lvp" bgheight="318px" bgwidth="318px" imgheight="257px" imgwidth="257px" height="100%" width="318px" iconsMarginLeft="30px" />
                         ))}
                     </div>
-                    
+
 
                 </div>
                 <div className='flex flex-col text-left ml-[50px] gap-4'>
                     <p className='Dheading'>Dining</p>
-                    <p className='DPara w-[90%]'>Dining Products: is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,</p>
-                    <p className='DPara w-[90%]'>Remaining essentially unchanged. It was popularized in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+                    <p className='DPara w-[94%]'>Dining Products: is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,</p>
+                    <p className='DPara w-[94%]'>Remaining essentially unchanged. It was popularized in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
                 </div>
             </div>
-            <div className=' myModal absolute  top-0 right-[10px] h-fit w-fit ' style={{display:"none"}} >
-                <FilterModal handClose={openModal}/>
+            <div className=' myModal absolute  top-0 right-[10px] h-fit w-fit ' style={{ display: "none" }} >
+                <FilterModal handClose={openModal} />
             </div>
             <Footer />
 
