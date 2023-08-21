@@ -13,6 +13,11 @@ import plate from '../../assets/Plate.png';
 import Rectangle_161 from '../../assets/Rectangle_161.png';
 import three from '../../assets/3.png';
 import Footer from '../../components/Footer';
+import ItemCard from '../../components/ItemCard';
+import shopping from '../../assets/shopping.png';
+import { useState } from 'react';
+import eye from '../../assets/eye.png';
+import gift from '../../assets/gift.png';
 
 
 const dummyCarouselData = [
@@ -46,42 +51,42 @@ const dummyCarouselData = [
 
 const similarProducts = [
     {
-      "imageSrc": greycup,
-      "name": "Accompanist Soup Plate Set",
-      "price": "AED400.00 inc. VAT"
-    },
-    {
-      "imageSrc": greycup,
-      "name": "Another Product Name",
-      "price": "AED250.00 inc. VAT"
-    },
-    {
-      "imageSrc": greycup,
-      "name": "Yet Another Product",
-      "price": "AED300.00 inc. VAT"
-    },
-    {
-      "imageSrc": greycup,
-      "name": "Fourth Product Name",
-      "price": "AED450.00 inc. VAT"
+        "imageSrc": greycup,
+        "name": "Accompanist Soup Plate Set",
+        "price": "AED400.00 inc. VAT"
     },
     {
         "imageSrc": greycup,
         "name": "Another Product Name",
         "price": "AED250.00 inc. VAT"
-      },
-      {
+    },
+    {
         "imageSrc": greycup,
         "name": "Yet Another Product",
         "price": "AED300.00 inc. VAT"
-      },
-      {
+    },
+    {
         "imageSrc": greycup,
         "name": "Fourth Product Name",
         "price": "AED450.00 inc. VAT"
-      },
-  ]
-  
+    },
+    {
+        "imageSrc": greycup,
+        "name": "Another Product Name",
+        "price": "AED250.00 inc. VAT"
+    },
+    {
+        "imageSrc": greycup,
+        "name": "Yet Another Product",
+        "price": "AED300.00 inc. VAT"
+    },
+    {
+        "imageSrc": greycup,
+        "name": "Fourth Product Name",
+        "price": "AED450.00 inc. VAT"
+    },
+]
+
 
 const AddtoCart = () => {
     const [quantity, setQuantity] = React.useState(1);
@@ -192,7 +197,7 @@ const AddtoCart = () => {
                 </div>
             </div>
             <div className='flex gap-[70px] ml-[50px]'>
-                <div className='flex w-[475px] h-[155px] mt-20 items-center' style={{ boxShadow: "0px 0px 6px 0px rgba(0, 0, 0, 0.10)" }}>
+                <div className='flex w-[445px] h-[155px] mt-20 items-center ml-[150px]' style={{ boxShadow: "0px 0px 6px 0px rgba(0, 0, 0, 0.10)" }}>
 
                     <img src={Rectangle_161} alt="" className='h-[97px] w-[97px] ml-5' />
                     <div className='flex flex-col pt-3 ml-5'>
@@ -202,7 +207,7 @@ const AddtoCart = () => {
                     </div>
 
                 </div>
-                <div className='flex w-[475px] h-[155px] mt-20 items-center' style={{ boxShadow: "0px 0px 6px 0px rgba(0, 0, 0, 0.10)" }}>
+                <div className='flex w-[445px] h-[155px] mt-20 items-center' style={{ boxShadow: "0px 0px 6px 0px rgba(0, 0, 0, 0.10)" }}>
 
                     <img src={Rectangle_161} alt="" className='h-[97px] w-[97px] ml-5' />
                     <div className='flex flex-col pt-3 ml-5'>
@@ -212,7 +217,7 @@ const AddtoCart = () => {
                     </div>
 
                 </div>
-                <div className='flex w-[475px] h-[155px] mt-20 items-center' style={{ boxShadow: "0px 0px 6px 0px rgba(0, 0, 0, 0.10)" }}>
+                <div className='flex w-[445px] h-[155px] mt-20 items-center' style={{ boxShadow: "0px 0px 6px 0px rgba(0, 0, 0, 0.10)" }}>
 
                     <img src={three} alt="" className='h-[97px] w-[97px] ml-5' />
                     <div className='flex flex-col pt-3 ml-5'>
@@ -223,13 +228,13 @@ const AddtoCart = () => {
 
                 </div>
             </div>
-            <div className='ml-[50px] mt-[100px] relative'>
+            <div className='ml-[190px] mt-[100px] relative'>
 
-                <p className='text-[#002D4F] text-[40px] leading-[53.76px] font-bold'>Similar Products</p>
+                <p className='text-[#002D4F] text-[40px] leading-[53.76px] font-normal'>Similar Products</p>
                 <div className="flex justify-center absolute top-[-20px] right-[220px] ">
                     <div
                         onClick={() => setCurrentPage(currentPage - 1)}
-                       
+
                         // disabled={currentPage === 0}
                         className="mr-2 navigation"
                     >
@@ -244,18 +249,36 @@ const AddtoCart = () => {
                         ›
                     </div>
                 </div>
-                <hr className='py-10 mt-3' style={{ stroke: "1px" }} />
-                <div className='flex gap-[70px]'>
+                <hr className='py-10 mt-3 w-[1490px]' style={{ stroke: "1px" }} />
+                <div className='flex gap-[45px]  '>
                     {
                         similarProducts.slice(currentPage * 4, currentPage * 4 + 4).map((item) => (
-                            <div className='flex flex-col'>
-                                <img src={item.imageSrc} alt="" className='h-[338px] w-[338px] rounded-[5px]' />
-                                <p className='text-[#002D4F] text-[20px] font-normal leading-[53.76px]'>{item.name}</p>
+                            <div className='flex flex-col  border border-solid rounded-[10px] '>
+                                <img src={item.imageSrc} alt="" className='h-[338px] w-[338px] rounded-[5px] mb-1' />
+                                <p className='text-[#002D4F] text-[20px] font-normal leading-[53.76px] pl-5 mt-3'>{item.name}</p>
                                 <hr className='border-[#F69785] mb-1  border-2' />
-                                <p className='text-[#8D7C3B] text-[15px] font-normal '>{item.price}</p>
+                                <p className='text-[#8D7C3B] text-[15px] font-normal pl-5 pb-3'>{item.price}</p>
+                                <div className='flex justify-center absolute translate-x-[95px] translate-y-[-20px] gap-3 bottom-[65px] pb-3 ' style={{ marginLeft:"" , marginTop:""  }}>
+
+                                    <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hover:bg-[#002D4F]'>
+                                        <img src={shopping} alt="" className='p-2 ' />
+                                    </div>
+                                    <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hover:bg-[#002D4F]'>
+                                        <img src={gift} alt="" className='p-2 ' />
+                                    </div>
+                                    <div className='flex h-10 w-10 rounded-full bg-white justify-center items-center shadow-2xl text-[#8D7C3B] hover:bg-[#002D4F]'>
+                                        <img src={eye} alt="" className='p-2' />
+                                    </div>
+                                </div>
                             </div>
                         ))
                     }
+                    {/* {
+                        similarProducts.slice(currentPage * 4, currentPage * 4 + 4).map((item) => (
+                            <ItemCard src={item.imageSrc} title={item.title} description={item.description} price={item.price} favIconPos="lvp" bgheight="318px" bgwidth="358px" imgheight="257px" imgwidth="257px" height="100%" width="90%" iconsMarginLeft="50px" />
+
+                        ))
+                    } */}
                     {/* <div className='flex flex-col'>
                         <img src={greycup} alt="" className='h-[338px] w-[338px] rounded-[5px]' />
                         <p className='text-[#002D4F] text-[20px] font-normal leading-[53.76px]'>Accompanist Soup Plate Set</p>

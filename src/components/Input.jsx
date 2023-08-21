@@ -1,10 +1,12 @@
 import React from 'react';
+import "../components/authComponents/RightContainer/RightContainer.css"
+import "./Input.css"
 
 
 const Input = (props) => {
   return (
     <div>
-        <input type={props.type} placeholder={props.placeholder} value={props.value} onChange={props.onChange} className="w-[536px] h-[64px] shrink-0 rounded-[5px] bg-[#fff]"
+        <input type={props.type} placeholder={props.placeholder} value={props.value} onChange={props.onChange} className="w-[536px] h-[44px] shrink-0 rounded-[5px] bg-[#fff]"
         style={{
             boxShadow:" 0px 0px 10px 0px rgba(0, 0, 0, 0.10)",
             color:"#A19C97",

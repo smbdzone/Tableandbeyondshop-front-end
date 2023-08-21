@@ -8,17 +8,17 @@ import insta from '../assets/Vector.png';
 const Footer = () => {
     return (
         <>
-        <div className='w-full bg-[#A6C3DB] mt-10 p-10 flex gap-80'>
-            <img src={source} alt="" className='-translate-x-10 h-[400px] w-[300px] mt-[60px]' />
-            <div className='flex flex-col gap-10'>
-                <div className="flex gap-36">
-                    <div className='flex flex-col gap-2'>
+        <div className='w-full bg-[#A6C3DB] mt-10 p-10 flex gap-80 scale-y-90' >
+            <img src={source} alt="" className='-translate-x-10 h-[300px] w-[200px] mt-[150px]' />
+            <div className='flex flex-col gap-[45px]'>
+                <div className="flex gap-36 pt-5">
+                    <div className='flex flex-col gap-4'>
                         <h1 className='text-[#8D7C3B] pb-4 text-[25px] font-semibold'>Customer Care</h1>
                         <h2 className='text-[#58595B] text-[15px] font-normal'>Contact Us</h2>
                         <h2 className='text-[#58595B] text-[15px] font-normal'>Return and Refund Policy</h2>
                         <h2 className='text-[#58595B] text-[15px] font-normal'>Shipping and Delivery FAQs</h2>
                     </div>
-                    <div className='flex flex-col gap-2'>
+                    <div className='flex flex-col gap-4'>
                         <h1 className='text-[#8D7C3B] pb-4 text-[25px] font-semibold'>Corporate</h1>
                         <h2 className='text-[#58595B] text-[15px] font-normal'>About Us</h2>
                         <h2 className='text-[#58595B] text-[15px] font-normal'>Table Talk</h2>
@@ -26,7 +26,7 @@ const Footer = () => {
                         <h2 className='text-[#58595B] text-[15px] font-normal'>Terms and Conditions</h2>
                         <h2 className='text-[#58595B] text-[15px] font-normal'>Privacy Policy</h2>
                     </div>
-                    <div className='flex flex-col gap-2'>
+                    <div className='flex flex-col gap-4'>
                         <h1 className='text-[#8D7C3B] pb-4 text-[25px] font-semibold'>Special Services</h1>
                         <h2 className='text-[#58595B] text-[15px] font-normal'>Inspirations</h2>
                         <h2 className='text-[#58595B] text-[15px] font-normal' >Special Customization</h2>
@@ -35,16 +35,13 @@ const Footer = () => {
                         <h2 className='text-[#58595B] text-[15px] font-normal'>Gift Registry</h2>
                     </div>
                 </div>
-                <div>
-
-                </div>
-                <p className='text-center text-[#8D7C3B] text-[20px] font-normal' >
+                <p className='text-center text-[#8D7C3B] text-[20px] font-normal mb-[-25px]' >
                 Subscribe to our Newsletter and enjoy 15% discount
                 </p >
                 <div className='flex flex-col w-full  justify-center items-center gap-5'>
                 <Input placeholder="Enter Full Name"  paddingLeft="25px"/>
                 <Input placeholder="Enter Email" paddingLeft="20px" />
-                <button className='w-[192px] h-[44px] shrink-0 rounded-[5px] bg-[#8D7C3B] text-white' style={{
+                <button className='w-[192px] h-[44px] shrink-0 rounded-[5px] bg-[#8D7C3B] text-white ' style={{
                     fontFamily:"PT Sans",
                 }}>
                     Subscribe
@@ -66,7 +63,8 @@ const Footer = () => {
             width:"100%",
             justifyContent:"space-between",
             paddingBottom:"20px",
-            marginTop:"10px"
+            paddingTop:"20px",
+            marginTop:"-40px"
         }}>
             <p className=' text-[#A6C3DB] text-[15px]'
             style={{

@@ -35,11 +35,11 @@ border: 1px solid #857550;
 }
 
 .DPara{
-    color: #000;
-font-family: Montserrat;
-font-size: 25px;
+    color: #58595B;
+font-family: PT Sans;
+font-size: 23px;
 font-style: normal;
-font-weight: 400;
+font-weight: 200;
 line-height: 36.8px; /* 147.2% */
 }
 
@@ -66,6 +66,7 @@ line-height: 36.8px; /* 147.2% */
     grid-template-columns: repeat(3, 2fr);
     width: 85%;
     row-gap: 50px;
+    /* margin-left: 500px; */
 
     
     

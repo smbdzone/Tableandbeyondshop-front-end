@@ -15,7 +15,7 @@ const SignUp = () => {
         <Navbar/>
         <MegaNav />
         <ContactBar />
-        <div className='flex flex-row mt-[100px]'>
+        <div className='flex flex-row mt-[100px] gap-[-200px]'>
             <LeftContainerSignUp src={dish}/>
             <RightContainerSignUp />
         </div>

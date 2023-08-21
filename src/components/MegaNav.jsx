@@ -175,7 +175,7 @@ const MegaNav = () => {
           <div className="flex justify-center gap-[46px] space-x-4 ml-10">
             {megaMenuItems.map((item, index) => (
               <div
-                key={item.title}
+                key={index}
                 className=" text-[18px] p-[-2px]"
                 onMouseEnter={() => handleMouseEnter(index)}
                 
@@ -185,10 +185,11 @@ const MegaNav = () => {
                    {/* <FaAngleDown className="ml-1" /> */}
                 </button>
                 {activeMenu === index && (
-                  <div className="absolute top-full left-1/3 bg-white text-gray-800 shadow-lg p-4 w-screen z-10 w-[50%]" onMouseLeave={handleMouseLeave}>
+                  <div className="absolute top-full left-[5%] bg-white text-gray-800 shadow-lg p-4  z-10 w-[90%]" onMouseLeave={handleMouseLeave}>
                     <div className="flex justify-between space-x-8" >
-                      {item.categories.map((category) => (
-                        <div key={category.title} >
+                      {item.categories.map((category,categoryIndex) => (
+                        <>
+                         <div key={`${index}-${categoryIndex}`}>
                           <h2 className="font-semibold">{category.title}</h2>
                           <ul>
                             {category.links.map((link, linkIndex) => (
@@ -199,11 +200,16 @@ const MegaNav = () => {
                               </li>
                             ))}
                           </ul>
+                          
                         </div>
-                        
+                      
+                        </>
                       ))}
-                      <img src={item.img} alt="" />
+                      <div>
+                      <img src={car2} alt="" />
+                      </div>
                     </div>
+                    
                   </div>
                 )}
               </div>

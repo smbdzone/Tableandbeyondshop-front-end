@@ -181,7 +181,7 @@ const Dining = () => {
                 <div className='flex mt-[80px]' style={{
                     justifyContent: 'space-between'
                 }}>
-                    <div className='flex items-center justify-center gap-4 ml-[50px]   '>
+                    <div className='flex items-center justify-center gap-4 ml-[170px]   '>
                         <div className='flex items-center justify-center filterOptions'>
                             Color
                         </div>
@@ -200,7 +200,7 @@ const Dining = () => {
                             </svg>
                         </div>
                     </div>
-                    <div className='flex flex-row items-center gap-2  mr-[250px]'>
+                    <div className='flex flex-row items-center gap-2  mr-[180px]'>
                         <p className='text-[#58595B] text-[21px]'>View</p>
                         <input type="range" className='' value={gridQuantity} onChange={(e) => setgridQuantity(e.target.value)} min="3" max="6" />
                         <p className='text-[#58595B] text-[21px]'>{gridQuantity} products</p>
@@ -208,7 +208,7 @@ const Dining = () => {
 
                 </div>
 
-                {gridQuantity == 3 ? (<div className="wrapper3  w-[85%]" >
+                {gridQuantity == 3 ? (<div className="wrapper3  w-[85%] ml-[170px]" >
 
                     <ItemCard src={dish1} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} bgheight="450px" height="600px" width="480px" iconsMarginLeft="110px" textMarginTop="40px" />
                     <ItemCard src={dish2} title={"Dinnerware"} description={"Accompanist Bowl Square"} price={500} detail={"New"} bgheight="450px" height="600px" width="480px" iconsMarginLeft="110px" textMarginTop="40px" />
@@ -273,13 +273,13 @@ const Dining = () => {
 
 
 
-                <div className='text-left relative ml-[50px]'>
+                <div className='text-left relative ml-[170px] mt-[140px]'>
                     <div className='flex w-full ' style={{
                         justifyContent: 'space-between'
 
                     }}>
                         <p className='Dheading'>Last Viewed Products</p>
-                        <div className="flex justify-center absolute right-[290px]">
+                        <div className="flex justify-center absolute right-[205px]">
                             <button
                                 onClick={handlePrevPage}
                                 disabled={currentPage === 0}
@@ -295,23 +295,23 @@ const Dining = () => {
                             </button>
                         </div>
                     </div>
-                    <hr></hr>
-                    <div className="grid grid-cols-4  mt-[50px] carousel pb-[100px] w-[85%]">
+                    <hr className='w-[1520px]'></hr>
+                    <div className="grid grid-cols-4  mt-[50px] carousel pb-[100px] w-[90%]">
                         {/* Display sliced carousel items */}
                         {slicedItems.map((item) => (
-                            <ItemCard src={item.src} title={item.title} description={item.description} price={item.price} favIconPos="lvp" bgheight="318px" bgwidth="318px" imgheight="257px" imgwidth="257px" height="100%" width="318px" iconsMarginLeft="30px" />
+                            <ItemCard src={item.src} title={item.title} description={item.description} price={item.price} favIconPos="lvp" bgheight="318px" bgwidth="358px" imgheight="257px" imgwidth="257px" height="100%" width="90%" iconsMarginLeft="50px" />
                         ))}
                     </div>
 
 
                 </div>
-                <div className='flex flex-col text-left ml-[50px] gap-4'>
+                <div className='flex flex-col text-left ml-[50px] gap-4 mb-[20px]'>
                     <p className='Dheading'>Dining</p>
-                    <p className='DPara w-[94%]'>Dining Products: is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,</p>
-                    <p className='DPara w-[94%]'>Remaining essentially unchanged. It was popularized in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+                    <p className='DPara w-[94%] tracking-[2px]'>Dining Products: is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,</p>
+                    <p className='DPara w-[94%] tracking-[2px]'>Remaining essentially unchanged. It was popularized in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
                 </div>
             </div>
-            <div className=' myModal absolute  top-0 right-[10px] h-fit w-fit ' style={{ display: "none" }} >
+            <div className=' myModal absolute  top-0 right-[1px] h-fit w-fit z-1 scale-x-0.5' style={{ display: "none" }} >
                 <FilterModal handClose={openModal} />
             </div>
             <Footer />

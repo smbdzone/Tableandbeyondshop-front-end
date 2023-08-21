@@ -43,7 +43,7 @@ const ImageCarousel = () => {
         infiniteLoop
       >
         <div>
-          <img src={deals} alt="Image 1" className='h-[420px]' />
+          <img src={deals} alt="Image 1" className='h-[420px] ' style={{objectFit:'contain'}} />
         </div>
         <div>
           <img src={deals} alt="Image 2" className='h-[420px]' />

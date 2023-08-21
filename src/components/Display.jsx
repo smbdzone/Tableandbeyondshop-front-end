@@ -20,7 +20,7 @@ const Display = () => {
     return (
         <div className='flex mt-[100px] gap-[300px] items-center bg-[#F2F2F1] py-10 w-screen' >
             <div className=''>
-                <img src={logo2} alt="logo" className="" />
+                <img src={logo2} alt="logo" className="h-[250px]" />
             </div>
             <div className='flex gap-20 mr-[150px]'>
                 <div className='flex flex-col gap-24 '>

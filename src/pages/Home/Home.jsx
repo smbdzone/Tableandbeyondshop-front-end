@@ -152,10 +152,10 @@ const Home = () => {
                     </div>
                     <hr className="mb-4 border-2 bg-[#6C757D ] w-[1700px]" />
 
-                    <div className="grid grid-cols-4  mt-[50px] carousel pb-[100px] newArrival gap-[40px]">
+                    <div className="grid grid-cols-4  mt-[50px] carousel pb-[100px] newArrival ">
                         {/* Display sliced carousel items */}
                         {slicedItems.map((item) => (
-                            <ItemCard key={item} src={item.src} title={item.title} description={item.description} price={item.price} favIconPos="lvp" bgheight="358px" bgwidth="388px" imgheight="257px" imgwidth="257px" height="100%" width="98%" iconsMarginLeft="70px" />
+                            <ItemCard key={item} src={item.src} title={item.title} description={item.description} price={item.price} favIconPos="lvp" bgheight="358px" bgwidth="388px" imgheight="257px" imgwidth="257px" height="100%" width="91%" iconsMarginLeft="70px" />
                         ))}
                     </div>
                 </div>
